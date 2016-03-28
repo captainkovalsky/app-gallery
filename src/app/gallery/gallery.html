@@ -1,0 +1,21 @@
+<div>
+  <div ng-if="error">{{error.message}}</div>
+  <div ng-if="galleryCtrl.loaded">
+    <form ng-if="searchBox">
+      <label>Search</label>
+      <input ng-model="galleryCtrl.searchToken" ng-change="galleryCtrl.updateSearch()" type="text" class="form-control" />
+    </form>
+
+    <div ng-if="pagination">
+      <select ng-change="galleryCtrl.updateSearch()" ng-model="galleryCtrl.pagination.perPage" ng-options="o as o for o in galleryCtrl.perPage"></select>
+      <select ng-change="galleryCtrl.updateSearch()" ng-model="galleryCtrl.sortBy" ng-options="o as o for o in galleryCtrl.sortOptions"></select>
+      <uib-pagination direction-links="false" total-items="galleryCtrl.totalPages" ng-model="galleryCtrl.currentPage" num-pages="galleryCtrl.pagination.numPages" items-per-page="galleryCtrl.pagination.perPage"
+                      ng-change="galleryCtrl.updateSearch()">
+      </uib-pagination>
+    </div>
+
+    <span ng-repeat="image in galleryCtrl.images | limitTo: galleryCtrl.pagination.perPage track by $index">
+      <img style="width: 250px; height: 155px;" ng-src="{{image.url}}" err-src="/assets/No-Image-Basic.png"  />
+    </span>
+  </div>
+</div>

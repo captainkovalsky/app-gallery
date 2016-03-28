@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8"/>
+    <title>gallery</title>
+    <!-- inject:vendor:css -->
+    <link rel="stylesheet" href="/angular-ui-grid/ui-grid.css">
+    <link rel="stylesheet" href="/ngDialog/css/ngDialog.css">
+    <link rel="stylesheet" href="/ngDialog/css/ngDialog-theme-default.css">
+    <link rel="stylesheet" href="/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css">
+    <!-- endinject -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/gallery/gallery.css">
+    <!-- endinject -->
+  </head>
+  <body ng-controller="MainController">
+    <h1>gallery</h1>
+
+    <my-gallery
+      pagination="true"
+      search-box="true"
+      results-per-page="10"
+      sorting="true"
+      feed="https://s3.amazonaws.com/launchme/images.json"
+      auto-rotate-time="500"></my-gallery>
+
+    <my-gallery
+      pagination="true"
+      search-box="true"
+      results-per-page="5"
+      sorting="true"
+      auto-rotate-time="6000"
+      feed='[
+      {"title": "one", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one2", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one3", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one4", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one4", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one4", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "tiger", "date": 233, "url": "https://www.planwallpaper.com/static/images/Winter-Tiger-Wild-Cat-Images.jpg"},
+      {"title": "one5", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one6", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one6", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one7", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "one", "date": 2, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg"},
+      {"title": "two", "date": 1, "url": "http://www.joomlaworks.net/images/demos/galleries/abstract/no-oima.jpg"}
+      ]'
+      auto-rotate-time="500"></my-gallery>
+
+    <!-- inject:vendor:js -->
+
+    <script src="/angular/angular.js"></script>
+
+    <script src="/angular-route/angular-route.js"></script>
+
+    <script src="/jquery/dist/jquery.js"></script>
+
+    <script src="/angular-resource/angular-resource.js"></script>
+
+    <script src="/angular-ui-grid/ui-grid.js"></script>
+
+    <script src="/ngDialog/js/ngDialog.js"></script>
+
+    <script src="/less/dist/less.js"></script>
+
+    <script src="/seiyria-bootstrap-slider/dist/bootstrap-slider.js"></script>
+
+    <script src="/waypoints/waypoints.js"></script>
+
+    <script src="/SHA-1/sha1.js"></script>
+
+    <script src="/angular-animate/angular-animate.js"></script>
+
+    <script src="/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script src="/angular-bootstrap-slider/slider.js"></script>
+
+    <script src="/angulartics/src/angulartics.js"></script>
+
+    <script src="/angulartics/src/angulartics-adobe.js"></script>
+
+    <script src="/angulartics/src/angulartics-chartbeat.js"></script>
+
+    <script src="/angulartics/src/angulartics-cnzz.js"></script>
+
+    <script src="/angulartics/src/angulartics-flurry.js"></script>
+
+    <script src="/angulartics/src/angulartics-ga-cordova.js"></script>
+
+    <script src="/angulartics/src/angulartics-ga.js"></script>
+
+    <script src="/angulartics/src/angulartics-gtm.js"></script>
+
+    <script src="/angulartics/src/angulartics-kissmetrics.js"></script>
+
+    <script src="/angulartics/src/angulartics-mixpanel.js"></script>
+
+    <script src="/angulartics/src/angulartics-piwik.js"></script>
+
+    <script src="/angulartics/src/angulartics-scroll.js"></script>
+
+    <script src="/angulartics/src/angulartics-segmentio.js"></script>
+
+    <script src="/angulartics/src/angulartics-splunk.js"></script>
+
+    <script src="/angulartics/src/angulartics-woopra.js"></script>
+
+    <script src="/angulartics/src/angulartics-marketo.js"></script>
+
+    <script src="/angulartics/src/angulartics-intercom.js"></script>
+
+    <!-- endinject -->
+    <script src="/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <!-- inject:js -->
+    <script src="/app.js"></script>
+    <script src="/gallery/gallery-image-service.js"></script>
+    <script src="/gallery/gallery-directive.js"></script>
+    <script src="/gallery/gallery-controller.js"></script>
+    <script src="/app-route.js"></script>
+    <script src="/gallery-templates.js"></script>
+    <!-- endinject -->
+  </body>
+</html>
